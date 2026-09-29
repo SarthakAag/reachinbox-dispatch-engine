@@ -4,7 +4,7 @@ import app from "./app.js";
 import { ensureEmailIndex } from "./integrations/elasticsearch/email-index.service.js";
 
 const PORT = Number(
-  process.env.API_PORT ?? 4000,
+  process.env.PORT ?? process.env.API_PORT ?? 4000,
 );
 
 async function startServer() {
